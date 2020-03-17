@@ -8,7 +8,8 @@ function copy_proto_files()
   dest_path=$1
   src_path=$2
   cd ${src_path}
-  proto_files=`find . | grep -P '\.proto$' | grep -vP 'host'`
+  #proto_files=`find . | grep '\.proto$' | grep -v 'host'`
+  proto_files=`find . | grep '\.proto$'`
   cd -
   for file in ${proto_files}
   do

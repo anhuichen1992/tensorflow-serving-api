@@ -7,10 +7,10 @@
   <properties>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     <java.version>1.8</java.version>
-    <tensor.version>1.8.0</tensor.version>
-    <grpc.version>1.12.0</grpc.version>
-    <protobuf.version>3.5.1</protobuf.version>
-    <protobuf.plugin.version>0.5.1</protobuf.plugin.version>
+    <tensor.version>1.12.0</tensor.version>
+    <grpc.version>1.27.0</grpc.version>
+    <protobuf.version>3.11.4</protobuf.version>
+    <protobuf.plugin.version>0.6.1</protobuf.plugin.version>
   </properties>
 
   <groupId>tensorflow.serving</groupId>
@@ -44,6 +44,11 @@
       <artifactId>protobuf-java</artifactId>
       <version>${protobuf.version}</version>
     </dependency>
+    <dependency>
+        <groupId>org.glassfish</groupId>
+        <artifactId>javax.annotation</artifactId>
+        <version>10.0-b28</version>
+    </dependency>
   </dependencies>
 
   <build>
@@ -51,14 +56,14 @@
       <extension>
         <groupId>kr.motd.maven</groupId>
         <artifactId>os-maven-plugin</artifactId>
-        <version>1.6.0</version>
+        <version>1.6.2</version>
       </extension>
     </extensions>
     <plugins>
       <plugin>
         <groupId>org.apache.maven.plugins</groupId>
         <artifactId>maven-compiler-plugin</artifactId>
-        <version>3.7.0</version>
+        <version>3.8.1</version>
         <configuration>
           <source>${java.version}</source>
           <target>${java.version}</target>
